@@ -15,12 +15,12 @@ def main():
 
     print(response.data[0].embedding)
 
-    DATA_STAX_ASTRA_KEY = os.environ.get("DATA_STAX_ASTRA_KEY")
-    ASTRA_DB_ENDPOINT = os.environ.get("ASTRA_DB_ENDPOINT")
+    token = os.environ.get("ASTRA_DB_APPLICATION_TOKEN")
+    api_endpoint = os.environ.get("ASTRA_DB_API_ENDPOINT")
 
     db = AstraDB(
-        token = DATA_STAX_ASTRA_KEY,
-        api_endpoint = ASTRA_DB_ENDPOINT
+        token = token,
+        api_endpoint = api_endpoint
     )
 
     print(f"Connected to Astra DB: {db.get_collections()}")

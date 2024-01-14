@@ -1,3 +1,8 @@
 opanai=
 python-dotenv=1.0.0
 astrapy=0.7.0
+datasets=
+langchain=
+tiktoken=
+langchain-openai=
+pypdf=
